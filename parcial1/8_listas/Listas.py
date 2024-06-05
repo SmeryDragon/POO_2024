@@ -27,7 +27,47 @@ palabras=["naranja","utd","saludos","america","azul"]
 
 palabra_buscar=input("ingresa la palabra a buscar: ")
 
-if palabras:
-    print("Encontre la palabra")
-else:
-    print("No encontre la palabra")
+for i in palabras:
+    if i==palabra_buscar:
+        print(f"Se encontra la palabra a buscar en la posicion {palabras.index}")
+        encontro=True
+
+if not encontro:
+    print("No se encontro")
+
+#Funcion con while
+
+palabras = ["naranja", "utd", "saludos", "america", "azul"]
+
+palabra_buscar = input("Ingresa la palabra a buscar: ")
+
+encontro = False
+i = 0
+
+while i < len(palabras):
+    if palabras[i] == palabra_buscar:
+        print(f"Se encontró la palabra a buscar en la posición {i}")
+        encontro = True
+        break
+    i += 1
+
+if not encontro:
+    print("No se encontró")
+
+
+#Ejemplo 3 Agregar y Eliminar elementos de una lista os system("clear")
+
+numeros=[23,34,23]
+print(numeros)
+
+#agregar un elemento
+numeros.append(100)
+print(numeros)
+numeros.insert(3200)
+print(numeros)
+
+#eliminar un elemento
+numeros.remove(100) #indicaar el elemento a borrar
+print(numeros)
+numeros.pop(2)#indicar la posicion del elemento a borrar
+print(numeros)
