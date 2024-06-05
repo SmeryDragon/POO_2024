@@ -71,3 +71,57 @@ numeros.remove(100) #indicaar el elemento a borrar
 print(numeros)
 numeros.pop(2)#indicar la posicion del elemento a borrar
 print(numeros)
+
+#Ejemplo 4 crear una lista multilinea(matriz) para agrega los nombres y numeros telefonicos
+
+agenda=[
+    ["Carlos", 6181234567],
+    ["Leo", 6671234576],
+    ["Sebastian", 6182341234],
+    ["Pedro", 6171236789]
+    ]
+
+print(agenda)
+
+for i in agenda:
+    print(f"{agenda.index(i)+1}.-{i}")
+    
+    #Ejemplo 5 Crear un programa que permita Gestionar (Administrar) peliculas,
+    #colocar un menu de opciones para agregar, remover, consultar peliculas
+    #Notas:
+    #1.- Utilizar funciones y mandar llamar desde otro archivo
+    #2.- Utilizar listas para almacenar los nombres de peliculas
+
+    # main.py
+
+import peliculas
+
+def mostrar_menu():
+    """Muestra el menú de opciones."""
+    print("\nMenú de opciones:")
+    print("1. Agregar película")
+    print("2. Remover película")
+    print("3. Consultar películas")
+    print("4. Salir")
+
+def main():
+    while True:
+        mostrar_menu()
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            nombre = input("Ingrese el nombre de la película a agregar: ")
+            peliculas.agregar_pelicula(nombre)
+        elif opcion == "2":
+            nombre = input("Ingrese el nombre de la película a remover: ")
+            peliculas.remover_pelicula(nombre)
+        elif opcion == "3":
+            peliculas.consultar_peliculas()
+        elif opcion == "4":
+            print("Saliendo del programa.")
+            break
+        else:
+            print("Opción no válida. Por favor, intente de nuevo.")
+
+if __name__ == "__main__":
+    main()
