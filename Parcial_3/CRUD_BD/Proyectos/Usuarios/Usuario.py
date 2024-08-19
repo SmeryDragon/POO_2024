@@ -1,3 +1,4 @@
+from Parcial_3.CRUD_BD.Proyectos.notas_systemV3.funciones import borrarPantalla, esperarTecla
 from usuarios import usuario
 from notas import nota
 import getpass
@@ -78,5 +79,5 @@ def menu_notas(usuario_id,nombre,apellidos):
             print("\n \t \t Opción no válida. Intenta de nuevo.")
             esperarTecla()
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     menu_principal()

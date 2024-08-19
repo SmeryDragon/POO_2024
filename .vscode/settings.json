@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Parcial_3/CRUD_BD/Proyectos/notas_systemV3"
+    ]
+}
